@@ -1,5 +1,4 @@
 
-import { useState } from "react";
 import { motion } from "framer-motion";
 import { Phone, Clock, Users2, Star } from "lucide-react";
 
@@ -16,14 +15,14 @@ export const Navigation = ({ activeTab, onTabChange }: NavigationProps) => {
   ];
 
   return (
-    <nav className="fixed bottom-0 left-0 right-0 bg-nothing-darkGlass backdrop-blur-xl border-t border-nothing-white/10 px-4 py-2">
+    <nav className="fixed bottom-0 left-0 right-0 bg-black/40 backdrop-blur-xl border-t border-white/10 px-4 py-2">
       <div className="flex justify-around items-center">
         {tabs.map(({ id, icon: Icon, label }) => (
           <button
             key={id}
             onClick={() => onTabChange(id)}
             className={`flex flex-col items-center p-2 relative ${
-              activeTab === id ? "text-nothing-red" : "text-gray-400"
+              activeTab === id ? "text-nothing-red" : "text-white/60"
             }`}
           >
             <Icon size={24} />

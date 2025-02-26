@@ -20,7 +20,7 @@ export const Keypad = ({ onDigitPress, onCall }: KeypadProps) => {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: 20 }}
-      className="bg-nothing-darkGlass backdrop-blur-xl rounded-t-3xl p-6 w-full max-w-md mx-auto"
+      className="bg-black/40 backdrop-blur-xl rounded-t-3xl p-6 w-full max-w-md mx-auto"
     >
       <div className="grid grid-cols-3 gap-4">
         {digits.map((row, rowIndex) =>
@@ -29,7 +29,7 @@ export const Keypad = ({ onDigitPress, onCall }: KeypadProps) => {
               key={digit}
               whileTap={{ scale: 0.95 }}
               onClick={() => onDigitPress(digit)}
-              className="h-16 w-16 rounded-full bg-nothing-grayGlass backdrop-blur-sm flex items-center justify-center text-2xl text-white/90 font-light hover:bg-nothing-white/10 transition-colors"
+              className="h-16 w-16 rounded-full bg-white/5 backdrop-blur-sm flex items-center justify-center text-2xl text-white/90 font-light hover:bg-white/10 transition-colors"
             >
               {digit}
             </motion.button>
